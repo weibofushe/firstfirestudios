@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>First Fire Studios</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<canvas id="ember-canvas"></canvas>
+<div id="scanlines"></div>
+<div id="vignette"></div>
+<div id="flicker"></div>
+
+<header>
+  <a class="logo" href="#top">
+    <span class="cursor"></span>
+    first_fire_studios
+  </a>
+  <nav>
+    <a href="#about"><b>[a]</b> about</a>
+    <a href="#projects"><b>[p]</b> projects</a>
+    <a href="#connect"><b>[c]</b> connect</a>
+    <a href="#support"><b>[s]</b> support</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero" style="border-top:none;">
+    <div>
+      <span class="prompt">echo welcome!</span>
+      <h1>welcome!</h1>
+      <p>We are First Fire Studios. Our games are designed to make you feel the wonder, curiosity, and warmth the first ever flame brought to the world. Through innovation, creativity and artistry, we strive to create fun, beautiful and awe inducing experiences for our players and community both in and outside of our games.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects"><kbd>[enter]</kbd> see projects</a>
+        <a class="btn btn-ghost" href="#connect"><kbd>[?]</kbd> connect with us</a>
+      </div>
+    </div>
+    <div class="panel media-panel">
+      <span class="tag">early build</span>
+      <span class="prompt">play trailer.mp4</span>
+      <button class="media-frame" type="button" aria-label="Play the first_fire_studios trailer">
+        <span class="media-scan"></span>
+        <span class="play-btn">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>
+        </span>
+        <span class="media-meta">gameplay_footage.mp4 &middot; 0:47</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="prompt">whois firstfirestudios.com</span>
+        <h2>about the studio</h2>
+        <p>please god i dont want to administer self-directed iras for the rest of my life.</p>
+      </div>
+      <div class="about-grid">
+        <div class="img-placeholder" style="--ratio:4/3;">
+          <span class="file-label">studio_photo.jpg</span>
+        </div>
+        <div class="stats">
+          <div class="panel stat">
+            <span class="num">2026</span>
+            <span class="label">studio founded</span>
+          </div>
+          <div class="panel stat">
+            <span class="num">5</span>
+            <span class="label">team members</span>
+          </div>
+          <div class="panel stat">
+            <span class="num">pc / console</span>
+            <span class="label">target platforms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="prompt">npm start</span>
+        <h2>projects</h2>
+        <p>shit is in the works like rogue-likes and souls-likes</p>
+      </div>
+      <div class="grid-3">
+        <div class="panel card">
+          <div class="img-placeholder"><span class="file-label">brenton_roguelike.png</span></div>
+          <span class="prompt">project_01.log</span>
+          <h3>brenton rogue-like</h3>
+          <span class="status">status &mdash; in development</span>
+          <p>brenton will put something here.</p>
+        </div>
+        <div class="panel card">
+          <div class="img-placeholder"><span class="file-label">formosa_concept.png</span></div>
+          <span class="prompt">project_02.log</span>
+          <h3>codename: formosa #1</h3>
+          <span class="status">status &mdash; in development</span>
+          <p>Taiwanese Mah Jong.</p>
+        </div>
+        <div class="panel card">
+          <div class="img-placeholder"><span class="file-label">cream_boy.png</span></div>
+          <span class="prompt">project_03.log</span>
+          <h3>cream boy</h3>
+          <span class="status">status &mdash; tbd</span>
+          <p>boy that runs around the city to collect ice-cream -oran</p>
+        </div>
+        <div class="panel card">
+          <div class="img-placeholder"><span class="file-label">shitty_coworker.png</span></div>
+          <span class="prompt">project_04.log</span>
+          <h3>shitty coworker or something</h3>
+          <span class="status">status &mdash; tbd</span>
+          <p>honestly my brain was super fried when oran pitched this one.</p>
+        </div>
+        <div class="panel card">
+          <div class="img-placeholder"><span class="file-label">jlmw.png</span></div>
+          <span class="prompt">project_05.log</span>
+          <h3>just let me work!</h3>
+          <span class="status">status &mdash; tbd</span>
+          <p>working at your desk pays the bills, but you're cursed to travel to alternative dimensions every 5 minutes which prevents you from getting a full day's work.</p>
+        </div>
+        <div class="panel card">
+          <div class="img-placeholder"><span class="file-label">jlmw.png</span></div>
+          <span class="prompt">project_06.log</span>
+          <h3>untitled project</h3>
+          <span class="status">status &mdash; tbd</span>
+          <p>tbd</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="connect">
+    <div class="section-inner cta">
+      <div>
+        <span class="prompt">msg ffs</span>
+        <h2>connect</h2>
+        <p>check us out on steam, discord, and youtube!</p>
+        <div class="footer-links" style="margin-top:22px;">
+          <a href="#">steam</a>
+          <a href="#">discord</a>
+          <a href="#">youtube</a>
+        </div>
+        <div class="img-placeholder" style="--ratio:3/2; margin-top:22px; max-width:360px;">
+          <span class="file-label">steam_widget.png</span>
+        </div>
+      </div>
+      <div>
+        <div class="img-placeholder" style="--ratio:3/2; margin-bottom:44px; max-width:360px;">
+          <span class="file-label">discord_widget.png</span>
+        </div>
+        <div class="img-placeholder" style="--ratio:3/2; max-width:360px;">
+          <span class="file-label">youtube_widget.png</span>
+        </div>
+        <form class="signup" onsubmit="event.preventDefault();">
+          <input type="email" placeholder="you@suckmail.com" aria-label="Email address">
+          <button type="submit">spam me</button>
+        </form>
+        <p class="fine">we are going to phish the absolute fuck outta you bro. poon who?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="prompt">--help</span>
+        <h2>support</h2>
+      </div>
+      <div class="grid-3">
+        <div class="panel card">
+          <span class="prompt">found_a_bug.md</span>
+          <h3>found a bug?</h3>
+          <p><a href="#">report it here</a> or email: bugs@firstfire.com</p>
+        </div>
+        <div class="panel card">
+          <span class="prompt">donate.md</span>
+          <h3>spare change?</h3>
+          <p>public ledger showing 100% of donations go to ffs?</p>
+        </div>
+        <div class="panel card">
+          <span class="prompt">sys_req.md</span>
+          <h3>system requirements</h3>
+          <p>even the ENIAC could run our shit</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-prompt">before the game, there was fire.</span>
+    <span>&copy; 2026 first_fire_studios</span>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

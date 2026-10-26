@@ -1,0 +1,212 @@
+/* =========================================================
+   index.css  |  home page only (load AFTER base.css)
+   (trailer frame, image placeholders, about, project and
+   support cards, hover descriptions, connect section)
+   ========================================================= */
+
+/* ---------- TRAILER FRAME ---------- */
+.media-frame{
+  width:100%;
+  aspect-ratio:16/9;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    linear-gradient(rgba(255,176,0,0.05), rgba(255,176,0,0.05)),
+    repeating-linear-gradient(135deg, rgba(255,176,0,0.05) 0 2px, transparent 2px 14px);
+  border:1px solid var(--amber-dim);
+  overflow:hidden;
+  padding:0;
+  cursor:pointer;
+  font-family:inherit;
+}
+.media-frame:hover .play-btn{background:var(--amber); color:#000;}
+.media-frame:focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+.media-scan{
+  position:absolute;
+  left:0; right:0; height:40%;
+  background:linear-gradient(rgba(255,176,0,0.09), transparent);
+  animation:scan 5s linear infinite;
+}
+@keyframes scan{
+  0%{top:-40%;}
+  100%{top:100%;}
+}
+.play-btn{
+  position:relative;
+  z-index:1;
+  width:56px; height:56px;
+  border-radius:50%;
+  border:1px solid var(--amber);
+  color:var(--amber);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding-left:3px;
+  transition:background 0.15s ease, color 0.15s ease;
+}
+.media-meta{
+  position:absolute;
+  left:14px; bottom:12px;
+  z-index:1;
+  font-size:0.72rem;
+  color:var(--amber-soft);
+}
+
+/* ---------- IMG PLACEHOLDER ---------- */
+.img-placeholder{
+  position:relative;
+  aspect-ratio:var(--ratio, 16/10);
+  border:1px solid var(--amber-dim);
+  background:repeating-linear-gradient(135deg, rgba(255,176,0,0.05) 0 2px, transparent 2px 14px);
+  overflow:hidden;
+}
+.img-placeholder::before{
+  content:"";
+  position:absolute; inset:0;
+  background:
+    linear-gradient(to top right, transparent calc(50% - 1px), var(--amber-dim) calc(50% - 1px), var(--amber-dim) calc(50% + 1px), transparent calc(50% + 1px)),
+    linear-gradient(to top left, transparent calc(50% - 1px), var(--amber-dim) calc(50% - 1px), var(--amber-dim) calc(50% + 1px), transparent calc(50% + 1px));
+}
+.img-placeholder .file-label{
+  position:absolute; left:0; right:0; bottom:0; z-index:1;
+  display:block;
+  padding:8px 12px;
+  font-size:0.72rem;
+  color:var(--amber-soft);
+  background:linear-gradient(to top, rgba(5,4,3,0.85), transparent);
+}
+
+.img-placeholder.has-img{background:none;}
+.img-placeholder.has-img::before{display:none;}
+
+.img-placeholder img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  filter:sepia(0.6) saturate(1.4) hue-rotate(-10deg) contrast(1.05) brightness(0.9);
+}
+
+.img-placeholder.has-img::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    linear-gradient(rgba(255,176,0,0.08), rgba(255,176,0,0.08)),
+    repeating-linear-gradient(to bottom, rgba(0,0,0,0.18) 0 1px, transparent 1px 3px);
+  mix-blend-mode:multiply;
+}
+
+/* ---------- ABOUT ---------- */
+.about-grid{display:grid; grid-template-columns:1fr 1.1fr; gap:16px; align-items:stretch;}
+.about-grid .stats{grid-template-columns:1fr; gap:16px;}
+.stats{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
+.stat{padding:20px;}
+.stat .num{display:block; color:var(--amber-bright); font-size:1.1rem; font-family:"Press Start 2P", monospace;}
+.stat .label{display:block; margin-top:10px; font-size:0.82rem; color:var(--amber-soft);}
+
+/* ---------- CARD GRID (PROJECTS / SUPPORT) ---------- */
+.card-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;}
+.card{padding:20px;}
+.card .img-placeholder{margin-bottom:18px;}
+.card .prompt{font-size:0.72rem;}
+.card h3{
+  font-family:"IBM Plex Mono", monospace;
+  color:var(--amber-bright);
+  font-size:1rem;
+  font-weight:600;
+  margin:0 0 10px;
+}
+.card .status{
+  display:block;
+  color:var(--amber-dim);
+  font-size:0.78rem;
+  margin-bottom:12px;
+}
+.card p{color:var(--amber-soft); font-size:0.88rem; margin:0;}
+
+/* links inside card text */
+.card p a{
+  color:var(--amber);
+  text-decoration:underline;
+}
+.card p a:hover,
+.card p a:focus-visible{
+  color:var(--amber-bright);
+}
+
+/* click-to-copy email button (Support section) */
+.copy-email{
+  background:none;
+  border:0;
+  padding:0;
+  font:inherit;
+  font-weight:bold;
+  color:var(--amber);
+  cursor:pointer;
+  text-decoration:underline dotted;
+}
+.copy-email:hover,
+.copy-email:focus-visible{
+  color:var(--amber-bright);
+  text-decoration-style:solid;
+}
+
+/* ---------- PROJECT HOVER DESCRIPTION ---------- */
+.hover-desc{
+  position:absolute;
+  inset:1px;
+  z-index:3;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:24px;
+  background:rgba(5,4,3,0.95);
+  opacity:0;
+  pointer-events:none;        /* only clickable when visible */
+  overflow-y:auto;            /* scrolls instead of clipping if it's still too long */
+  transition:opacity 0.2s ease;
+}
+.hover-desc p{
+  color:var(--amber-bright);
+  font-size:0.82rem;
+  margin:0;
+}
+.hover-desc a{
+  color:var(--amber);
+  text-decoration:underline;
+}
+.hover-desc a:hover,
+.hover-desc a:focus-visible{
+  color:var(--amber-bright);
+}
+.card:hover .hover-desc,
+.card:focus-within .hover-desc,
+.card:focus .hover-desc{
+  opacity:1;
+  pointer-events:auto;
+}
+.card:focus{outline:2px solid var(--amber); outline-offset:3px;}
+
+/* ---------- CONNECT (CTA) ---------- */
+.cta{display:grid; grid-template-columns:1.1fr 1fr; gap:36px; align-items:center;}
+.cta h2{font-size:clamp(1.1rem, 2vw, 1.4rem); margin-bottom:14px;}
+.cta p{color:var(--amber-soft); max-width:40ch; margin:0;}
+
+.footer-links{display:flex; gap:20px;}
+.footer-links a{text-decoration:none; color:var(--amber-soft);}
+.footer-links a:hover{color:var(--amber-bright);}
+
+/* ---------- HOME RESPONSIVE ---------- */
+@media (max-width:800px){
+  .about-grid{grid-template-columns:1fr;}
+  .stats{grid-template-columns:1fr; gap:1px;}
+  .card-grid{grid-template-columns:1fr; gap:1px;}
+  .cta{grid-template-columns:1fr;}
+}

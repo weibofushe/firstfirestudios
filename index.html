@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First Fire Studios</title>
+<title>First Fire Studios | Home</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/index.css">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
@@ -22,10 +23,41 @@
     first_fire_studios
   </a>
   <nav>
-    <a href="#about"><b>[a]</b> about</a>
-    <a href="#projects"><b>[p]</b> projects</a>
-    <a href="#connect"><b>[c]</b> connect</a>
-    <a href="#support"><b>[s]</b> support</a>
+
+    <div class="dropdown">
+      <a href="#about"><b>[a]</b> About</a>
+      <div class="dropdown-menu">
+        <a href="meettheteam.html">Meet the Team</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#projects"><b>[p]</b> Projects</a>
+      <div class="dropdown-menu">
+        <a href="gamejams.html">Game Jams List</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#connect"><b>[c]</b> Connect</a>
+      <div class="dropdown-menu">
+        <a href="#connect">Steam</a>
+        <a href="#connect">Discord</a>
+        <a href="#connect">Instagram</a>
+        <a href="#connect">Twitch</a>
+        <a href="#connect">YouTube</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#support"><b>[s]</b> Support</a>
+      <div class="dropdown-menu">
+        <a href="#support">Contact Us</a>
+        <a href="reportbugs.html">Found a Bug?</a>
+        <a href="donate.html">Donate</a>
+      </div>
+    </div>
+
   </nav>
 </header>
 
@@ -34,22 +66,22 @@
   <section class="hero" style="border-top:none;">
     <div>
       <span class="prompt">echo welcome!</span>
-      <h1>welcome!</h1>
+      <h1>Welcome!</h1>
       <p>We are First Fire Studios. Our games are designed to make you feel the wonder, curiosity, and warmth the first ever flame brought to the world. Through innovation, creativity and artistry, we strive to create fun, beautiful and awe inducing experiences for our players and community both in and outside of our games.</p>
       <div class="hero-actions">
-        <a class="btn" href="#projects"><kbd>[enter]</kbd> see projects</a>
-        <a class="btn btn-ghost" href="#connect"><kbd>[?]</kbd> connect with us</a>
+        <a class="btn" href="#projects"><kbd>[enter]</kbd> See Projects</a>
+        <a class="btn btn-ghost" href="#connect"><kbd>[c]</kbd> Connect With Us</a>
       </div>
     </div>
     <div class="panel media-panel">
       <span class="tag">early build</span>
-      <span class="prompt">play trailer.mp4</span>
+      <span class="prompt">./play_trailer.sh</span>
       <button class="media-frame" type="button" aria-label="Play the first_fire_studios trailer">
         <span class="media-scan"></span>
         <span class="play-btn">
           <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 4l14 8-14 8V4z" fill="currentColor"/></svg>
         </span>
-        <span class="media-meta">gameplay_footage.mp4 &middot; 0:47</span>
+        <span class="media-meta">gameplay_footage.mp4 &middot; 00:00</span>
       </button>
     </div>
   </section>
@@ -58,8 +90,12 @@
     <div class="section-inner">
       <div class="section-head">
         <span class="prompt">whois firstfirestudios.com</span>
-        <h2>about the studio</h2>
-        <p>please god i dont want to administer self-directed iras for the rest of my life.</p>
+        <h2>About the Studio</h2>
+        <p>
+          First Fire Studios is a team of three, with careers in banking and a shared love of games. 
+          We're inspired by indie developers who show that creativity matters more than budget, and 
+          we're building our games the same way.
+        </p>
       </div>
       <div class="about-grid">
         <div class="img-placeholder" style="--ratio:4/3;">
@@ -68,15 +104,15 @@
         <div class="stats">
           <div class="panel stat">
             <span class="num">2026</span>
-            <span class="label">studio founded</span>
+            <span class="label">Studio Founded</span>
           </div>
           <div class="panel stat">
-            <span class="num">5</span>
-            <span class="label">team members</span>
+            <span class="num">3</span>
+            <span class="label">Team Members | <a class="text-link" href="meettheteam.html">Meet the Team!</a></span>
           </div>
           <div class="panel stat">
-            <span class="num">pc / console</span>
-            <span class="label">target platforms</span>
+            <span class="num">PC / Console / Mobile</span>
+            <span class="label">Target Platforms</span>
           </div>
         </div>
       </div>
@@ -86,63 +122,48 @@
   <section id="projects">
     <div class="section-inner">
       <div class="section-head">
-        <span class="prompt">npm start</span>
-        <h2>projects</h2>
-        <p>are we working hard or hardly working?</p>
+        <span class="prompt">ls ./projects</span>
+        <h2>Projects</h2>
+        <p>Take a look at what we are working on!<br>
+          <a class="text-link" href="gamejams.html" target="_blank" rel="noopener noreferrer">Click here</a> to see our Game Jam submissions.</p>
       </div>
       <div class="card-grid">
-        <div class="panel card">
+
+        <div class="panel card" tabindex="0">
           <div class="img-placeholder has-img" style="--ratio:16/10">
-            <img src="img/ghostguy.gif" alt="ghost-gif">
-            <!-- <span class="file-label">terrorjam2026.png</span> -->
+            <img src="img/ghostguy.gif" alt="ghost-gif">  
           </div>
-          <span class="prompt">project_00.log</span>
-          <h3>CODENAME: CAN YOU HEAR ME?</h3>
+          <div class="hover-desc">
+              <p>Our entry into <a href="https://itch.io/jam/terror-jam-2026-a-halloween-game-jam" target="_blank" rel="noopener noreferrer">Terror Jam 2026</a> 
+                (and our first game!). We plan to continue developing this game for a full release. <a href="https://firstfirestudios.itch.io/can-you-hear-me" target="_blank" rel="noopener noreferrer">Click here to play the demo!</a></p>
+            </div>
+          <span class="prompt">cat project_00.log</span>
+          <h3>CODENAME:<br>CAN YOU HEAR ME?</h3>
+          <span class="status">status &mdash; submitted!</span>
+        </div>
+
+        <div class="panel card" tabindex="0">
+          <div class="img-placeholder"><span class="file-label">facemelt_roguelike.png</span>
+          </div>
+          <div class="hover-desc">
+            <p>A new take at the popular, and extremely addicting rogue-like genre.</p>
+          </div>
+          <span class="prompt">cat project_01.log</span>
+          <h3>CODENAME:<br>HAND TATTOO</h3>
           <span class="status">status &mdash; in development</span>
-          <p>our entry into <a href="https://itch.io/jam/terror-jam-2026-a-halloween-game-jam" target="_blank" rel="noopener noreferrer">Terror Jam 2026 - A Halloween Game Jam</a> (and our first game!)</p>
         </div>
-        <div class="panel card">
-          <div class="img-placeholder"><span class="file-label">brenton_roguelike.png</span></div>
-          <span class="prompt">project_01.log</span>
-          <h3>CODENAME: HAND TATTOO</h3>
-          <span class="status">status &mdash; in development</span>
-          <p>a new take at the popular, and extremely addicting rogue-like genre.</p>
+
+        <div class="panel card" tabindex="0">
+          <div class="img-placeholder"><span class="file-label">missing.png</span>
+          </div>
+          <div class="hover-desc">
+            <p>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</p>
+          </div>
+          <span class="prompt">cat project_02.log</span>
+          <h3>CODENAME:<br>ERROR</h3>
+          <span class="status">status &mdash; LKS*SF__@#*^DS^*SDF</span>
         </div>
-        <!-- <div class="panel card">
-          <div class="img-placeholder"><span class="file-label">formosa_concept.png</span></div>
-          <span class="prompt">project_02.log</span>
-          <h3>codename: formosa #1</h3>
-          <span class="status">status &mdash; in development</span>
-          <p>Taiwanese Mah Jong.</p>
-        </div>
-        <div class="panel card">
-          <div class="img-placeholder"><span class="file-label">cream_boy.png</span></div>
-          <span class="prompt">project_03.log</span>
-          <h3>cream boy</h3>
-          <span class="status">status &mdash; tbd</span>
-          <p>boy that runs around the city to collect ice-cream -oran</p>
-        </div>
-        <div class="panel card">
-          <div class="img-placeholder"><span class="file-label">shitty_coworker.png</span></div>
-          <span class="prompt">project_04.log</span>
-          <h3>shitty coworker or something</h3>
-          <span class="status">status &mdash; tbd</span>
-          <p>honestly my brain was super fried when oran pitched this one.</p>
-        </div>
-        <div class="panel card">
-          <div class="img-placeholder"><span class="file-label">jlmw.png</span></div>
-          <span class="prompt">project_05.log</span>
-          <h3>just let me work!</h3>
-          <span class="status">status &mdash; tbd</span>
-          <p>working at your desk pays the bills, but you're cursed to travel to alternative dimensions every 5 minutes which prevents you from getting a full day's work.</p>
-        </div>
-        <div class="panel card">
-          <div class="img-placeholder"><span class="file-label">jlmw.png</span></div>
-          <span class="prompt">project_06.log</span>
-          <h3>untitled project</h3>
-          <span class="status">status &mdash; tbd</span>
-          <p>tbd</p>
-        </div> -->
+
       </div>
     </div>
   </section>
@@ -150,30 +171,21 @@
   <section id="connect">
     <div class="section-inner cta">
       <div>
-        <span class="prompt">msg ffs</span>
-        <h2>connect</h2>
-        <p>check us out on steam, discord, and youtube!</p>
+        <span class="prompt">ping firstfire</span>
+        <h2>Connect</h2>
+        <p>Check us out on our platforms!</p>
         <div class="footer-links" style="margin-top:22px;">
-          <a href="#">steam</a>
-          <a href="#">discord</a>
-          <a href="#">youtube</a>
-        </div>
-        <div class="img-placeholder" style="--ratio:3/2; margin-top:22px; max-width:360px;">
-          <span class="file-label">steam_widget.png</span>
+          <a href="#">Steam</a>
+          <a href="#">Discord</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitch</a>
+          <a href="#">YouTube</a>
         </div>
       </div>
       <div>
         <div class="img-placeholder" style="--ratio:3/2; margin-bottom:44px; max-width:360px;">
-          <span class="file-label">discord_widget.png</span>
+          <span class="file-label">idk_what_to_put_here.png</span>
         </div>
-        <div class="img-placeholder" style="--ratio:3/2; max-width:360px;">
-          <span class="file-label">youtube_widget.png</span>
-        </div>
-        <form class="signup" onsubmit="event.preventDefault();">
-          <input type="email" placeholder="love@you.com" aria-label="Email address">
-          <button type="submit">spam me</button>
-        </form>
-        <p class="fine">we are going to phish the absolute f#ck outta you bro.</p>
       </div>
     </div>
   </section>
@@ -181,34 +193,44 @@
   <section id="support">
     <div class="section-inner">
       <div class="section-head">
-        <span class="prompt">--help</span>
-        <h2>support</h2>
+        <span class="prompt">firstfire --help</span>
+        <h2>Support</h2>
       </div>
       <div class="card-grid">
         <div class="panel card">
-          <span class="prompt">found_a_bug.md</span>
-          <h3>found a bug?</h3>
-          <p><a href="#">report it here</a> or email: bugs@firstfire.com (not real yet lol)</p>
+          <span class="prompt">./send_signal.sh</span>
+          <h3>Contact Us</h3>
+          <p>
+            Questions, press, or just want to say hi? Email us:<br>
+            <button type="button" class="copy-email" data-email="hello@firstfirestudios.com" title="Click to copy">hey@firstfirestudios.com</button>
+          </p>
         </div>
+
         <div class="panel card">
-          <span class="prompt">donate.md</span>
-          <h3>spare change?</h3>
-          <p>public ledger showing 100% of donations go to ffs?</p>
+          <span class="prompt">./extinguish_bug.sh</span>
+          <h3>Found a Bug?</h3>
+          <p>
+            <a href="reportbugs.html">Report it here</a>
+            <br>or send us an email:<br>
+            <button type="button" class="copy-email" data-email="bugs@firstfirestudios.com" title="Click to copy">bugs@firstfirestudios.com</button>
+          </p>
         </div>
+
         <div class="panel card">
-          <span class="prompt">sys_req.md</span>
-          <h3>system requirements</h3>
-          <p>even the ENIAC could run our sh#t</p>
+          <span class="prompt">./add_fuel.sh</span>
+          <h3>Donate</h3>
+          <p>
+            Times are tough, which makes every donation invaluable.<br>If you'd like to support us, <a href="donate.html">click here!</a> 
+          </p>
         </div>
       </div>
     </div>
   </section>
-
 </main>
 
 <footer>
   <div class="footer-inner">
-    <span class="footer-prompt">before the game, there was fire.</span>
+    <span class="footer-prompt">Before the game, there was fire.</span>
     <span>&copy; 2026 first_fire_studios</span>
   </div>
 </footer>

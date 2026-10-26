@@ -15,6 +15,18 @@
     });
   }
 
+  // ---------------- HERO VIDEO ----------------
+const heroVideo = document.querySelector('.hero-video');
+if (heroVideo && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  heroVideo.pause();
+}
+if (heroVideo && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) heroVideo.play().catch(() => {});
+    else heroVideo.pause();
+  }, { threshold: 0.1 }).observe(heroVideo);
+}
+
   // ---------------- EMBERS :3 ----------------
   var emberCanvas = document.getElementById('ember-canvas');
   var ectx = emberCanvas.getContext('2d');
@@ -23,7 +35,7 @@
   // makes the canvas cover the whole page, not just the visible screen
   function resizeEmber(){
     EW = emberCanvas.width = window.innerWidth;
-    EH = emberCanvas.height = document.documentElement.scrollHeight;
+    EH = emberCanvas.height = window.innerHeight;
   }
   resizeEmber();
   window.addEventListener('resize', resizeEmber);
